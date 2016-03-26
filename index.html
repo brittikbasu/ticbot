@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link src="css/normalize.css" rel="stylesheet">
+  <link href="css/home.css" rel="stylesheet">
+  <link href="css/mygame.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The X &amp 0 Game !</title>
+</head>
+
+<body>
+  <div class="message">
+    <h3>PLease Rotate Your Device To Play The Game</h3></div>
+  <div class="not-compatible">
+    <center>
+      <div class="show" id="part1">
+        <div class="animated flip" style="padding-top: 10px">
+          <h1>The<br> <font color ="PaleGoldenrod"><div class="animated bounceInLeft" style=" display: inline-block;  font-size: 70px;">x</div> &amp
+            <div class="animated bounceInRight" style="display: inline-block; font-size: 70px;">0</div></font> Game!</h1>
+        </div>
+        <div class="spacer15"></div>
+        <hr>
+        <div class="spacer15"></div>
+        <div class="animated zoomInUp">
+          <h3>I want to play with my </h3>
+          <table>
+            <tr>
+              <td>
+                <input type="button" class="button2" value="Clever Robot" onclick="showPart(0,1,0,0);">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="button" value="Friend" class="button2" onclick="showPart(0,0,1,0);">
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!--++++++++++++SINGLE PLAYER-->
+      <div class="hide" id="part2">
+        <div class="spacer20"></div>
+        <div class="spacer20"></div>
+        <div class="spacer20"></div>
+        <div class="spacer20"></div>
+        <h3>What's your name awesome person?</h3>
+        <div class="spacer20"></div>
+        <button class="button" onclick="swapxand0();" id="swapx">X</button>
+        <input type="text" class="textbox" placeholder="Enter your name" id="player" onfocus="if(this.value == this.defaultValue) this.value = ''" />
+        <div class="spacer15"></div>
+        <div class="spacer15"></div>
+        <input type="button" class="button2" value="Back" onclick="showPart(1,0,0,0); boardReset();">
+        <input type="button" class="button2" value="Start The Game" onclick="p1Name(); showPart(0,0,0,1); beforePush()">
+      </div>
+      <!--+++++++++++++TWO PLAYER GAME-->
+      <div class="hide" id="part3">
+        <div class="spacer15"></div>
+        <div class="spacer15"></div>
+        <h3>Enter your names players</h3>
+        <div class="spacer20"></div>
+        <div class="players-input">
+          <button class="button">X</button>
+          <input type="text" class="textbox" placeholder="Player1's Name" id="player1" onfocus="if(this.value == this.defaultValue) this.value = ''" />
+          <div class="spacer15"></div>
+          <button class="button" style="padding-top:7px;">0</button>
+          <input type="text" class="textbox" placeholder="Player2's Name" id="player2" onfocus="if(this.value == this.defaultValue) this.value = ''" />
+          <div class="spacer15"></div>
+          <div class="spacer15"></div>
+          <input type="button" class="button2" value="Back" onclick="showPart(1,0,0,0);">
+          <input type="button" class="button2" value="Start The Game" onclick="pNames();showPart(0,0,0,1);">
+        </div>
+      </div>
+      <!--                   GAME                       -->
+      <div class="hide" id="part4">
+        <center>
+          <div class="changing" id="changing" style="height:100vh;">
+            <audio id="audio" src="audio/switch.mp3"></audio>
+            <audio id="audio2" src="audio/applause.mp3"></audio>
+            <header>
+              <div id="cool">
+                <div class="area">
+                  <div id="inWinner">
+                    <div id="prompt" class="show">
+                      <table>
+                        <tr>
+                          <td>
+                            <h2 id="insertP1" class="stLine">GDH</h2>
+                          </td>
+                          <td>
+                            <h3>vs</h3>
+                          </td>
+                          <td>
+                            <h2 id="insertP2" class="stLine">HHG</h2>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div id="announce" class="hide"></div>
+                    <div id="turn" class="yourturn" style="margin-top:-31px;">
+                      <h5>It's your turn </h5>
+                    </div>
+                    <div class="buttons-bar">
+                      <input type="button" class="button2" value="Home" onclick="showPart(1,0,0,0); boardReset();" style="margin-right:10px;">
+                      <input type="button" class="button2" value="Reset" onclick="beforePush(); boardReset();">
+                    </div>
+                  </div>
+                </div>
+            </header>
+            <section>
+
+              <div class = "thought-block"><p id="thought">“Whether you think you can, or you think you can't--you're right.”
+― Henry Ford</p>
+              </div>
+              <div class="animated rollIn">
+                <!--<div id="animate1" style="z-index:3;">
+                <div id="draw"></div>
+              </div> -->
+                <div class="bcon">
+                  <div class="row">
+                    <div class="col" id="00">
+                      <button class="button" onclick="boardPush(0,0);" id="00B"></button>
+                    </div>
+                    <div class="col" id="01">
+                      <button class="button" onclick="boardPush(0,1);" id="01B"></button>
+                    </div>
+                    <div class="col" id="02">
+                      <button class="button" onclick="boardPush(0,2);" id="02B"></button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col" id="10">
+                      <button class="button" onclick="boardPush(1,0);" id="10B"></button>
+                    </div>
+                    <div class="col" id="11">
+                      <button class="button" onclick="boardPush(1,1);" id="11B"></button>
+                    </div>
+                    <div class="col" id="12">
+                      <button class="button" onclick="boardPush(1,2);" id="12B"></button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col" id="20">
+                      <button class="button" onclick="boardPush(2,0);" id="20B"></button>
+                    </div>
+                    <div class="col" id="21">
+                      <button class="button" onclick="boardPush(2,1);" id="21B"></button>
+                    </div>
+                    <div class="col" id="22">
+                      <button class="button" onclick="boardPush(2,2);" id="22B"></button>
+                    </div>
+                  </div>
+                  <div class="spacer20"></div>
+                </div>
+              </div>
+            </section>
+            </div>
+        </center>
+        </div>
+    </center>
+    </div>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
