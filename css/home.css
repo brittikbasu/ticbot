@@ -12,6 +12,9 @@ margin-right: -5px;
   display: none;
 }
 
+#changing{
+  height:100vh;
+}
 .textbox{
 
   height:25px;
@@ -70,7 +73,9 @@ h4 {
     font-size: 17px;
 }
 
-
+.yourturn{
+  margin-top:-31px;
+}
 .message {
   display: none;
 }
@@ -238,11 +243,7 @@ a .button {
     margin-bottom: -20px;
   }
 }
-@media (max-height:530px) {
-  .not-compatible {
-    display: none;
-  }
-}
+
 @media (max-height:569px) {
   .thought-block {
     display: none;
@@ -250,4 +251,39 @@ a .button {
   .area {
     margin-bottom: 10px;
   }
+}
+/*iphone 5*/
+@media (max-height:460px) {
+  .area{
+height:100px;
+
+line-height: 1;}
+
+.yourturn{
+  margin-top:-42px;
+}
+
+.buttons-bar{
+  height:20px;
+  margin-top:45px;
+}
+.left-button{
+  left:-20%;
+}
+.right-button{
+  right:-16%;
+}
+
+
+
+.buttons-bar .button2{
+  padding-top:2px;
+}
+.bcon{
+  margin-top:-20px;
+}
+#changing{
+  height:105vh;
+}
+
 }
