@@ -27,28 +27,7 @@ margin-right: -5px;
   width: 160px;
 }
 
-.button{
-  z-index:1;
-  display: inline-block;
-  border: 34px;
-  border-radius: 40px;
-  outline: 0;
-  width: 80px;
-  height: 80px;
-  background: #00717D;
-  box-shadow: 1px 0px 3px #ff6a00, 0px 1px 1px #ff6a00, 2px 1px 1px #ff6a00, 1px 2px 1px #ff6a00, 3px 2px 1px #ff6a00, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 13px #3852b1, 6px 5px 1px #203891;
-  color: white;
-  font-size: 40px;
-  white-space: nowrap;
-  font-family: 'Gloria Hallelujah', cursive;
-  padding: 9px 16px;
-  line-height: 1.4;
-  position: relative;
-  top: -5px; }
-.players-input{
-  height:280px;
-  width: 100%;
-}
+
 
 .spacer20{
   display:block;
@@ -92,38 +71,183 @@ h4 {
 }
 
 
-
-.button2{
-    display: inline-block;
-    border: 34px;
-    border-radius: 7px;
-    outline: 0;
-    width: auto;
-    height: auto;
-    background: #F2D8A7;
-    /*background: #CA00FF;*/
-    box-shadow: 1px 0px 1px #ff6a00, 0px 1px 1px #ff6a00, 2px 1px 1px #ff6a00, 1px 2px 1px #ff6a00, 3px 2px 1px #ff6a00, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 1px #3852b1, 6px 5px 1px #203891;
-    color: #00717D;
-    font-size: 20px;
-    white-space: nowrap;
-    font-family: 'Gloria Hallelujah', cursive;
-    padding: 9px 16px;
-    line-height: 1.2;
-    position: relative;
-    top: -5px;
+.message {
+  display: none;
 }
-.button2:hover,
-.button:focus{
-    box-shadow: 1px 0px 1px #b6ff00, 0px 1px 1px #b6ff00, 2px 1px 1px #b6ff00, 1px 2px 1px #b6ff00, 3px 2px 1px #b6ff00, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 1px #3852b1, 6px 5px 1px #203891;
+.bg1 {
+  height: 100%;
+  background-color: #CC3614;
 }
-.button2:active{
-    box-shadow: 1px 0px 1px #b6ff00, 0px 1px 1px #b6ff00, 2px 1px 1px #b6ff00, 1px 2px 1px #b6ff00, 3px 2px 1px #b6ff00, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 1px #3852b1, 6px 5px 1px #203891;
-    -webkit-transform: translate(3px, 3px);
-    -moz-transform: translate(3px, 3px);
-    -ms-transform: translate(3px, 3px);
-    -o-transform: translate(3px, 3px);
-    transform: translate(3px, 3px);
-    -moz-transition-duration: 5s;
-      -webkit-transition-duration: 5s;
-    -o-transition-duration: 5s;
+.bg2 {
+  height: 100%;
+  background-color: #FF7C00;
+}
+.bcon {
+  margin-right: 20px;
+  max-width: 400px;
+}
+.spacer20 {
+  display: block;
+  height: 20px;
+}
+.buttons-bar {
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 56px;
+  padding-top: 7px;
+}
+.yourturn {
+  margin-top: -30px;
+  margin-bottom: -40px;
+}
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  max-width: 425px;
+  height: 50%;
+  margin-top: 15px;
+}
+.col {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: block;
+  padding: 5px;
+  width: 100%;
+}
+.button {
+  display: inline-block;
+  border: 34px;
+  border-radius: 40px;
+  outline: 0;
+  width: 80px;
+  height: 80px;
+  background: #00717D;
+  box-shadow: 1px 0px 3px #ff6a00, 0px 1px 1px #ff6a00, 2px 1px 1px #ff6a00, 1px 2px 1px #ff6a00, 3px 2px 1px #ff6a00, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 13px #3852b1, 6px 5px 1px #203891;
+  color: white;
+  font-size: 40px;
+  white-space: nowrap;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding: 9px 16px;
+  line-height: 1.4;
+  position: relative;
+  top: -5px;
+  z-index:1;
+}
+.button:hover, .button:focus {
+  color: white;
+  background: #300717D;
+}
+.button:active {
+  box-shadow: 1px 0px 1px #b6ff00, 0px 1px 1px #b6ff00, 2px 1px 1px #b6ff00, 1px 2px 1px #b6ff00, 3px 2px 1px #b6ff00, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 1px #3852b1, 6px 5px 1px #203891;
+  -webkit-transform: translate3d(3px, 3px, 3px);
+  -moz-transform: translate(3px, 3px);
+  -ms-transform: translate(3px, 3px);
+  -o-transform: translate(3px, 3px);
+  transform: translate3d(3px, 3px, 3px);
+  -moz-transition-duration: 5s;
+  -webkit-transition-duration: 5s;
+  -o-transition-duration: 5s;
+}
+.area {
+  overflow: hidden;
+  display: inline-block;
+  border: 34px;
+  border-radius: 7px;
+  outline: 0;
+  width: 85%;
+  height: 145px;
+  background: #F2D8A7;
+  box-shadow: 1px 1px 3px 3px #ff6a00, 1px 1px 1px 3px #ff6a00, 1px 1px 1px 3px #ff6a00, 1px 1px 1px 3px #ff6a00, 1px 1px 1px 3px #ff6a00, 1px 1px 1px 3px #3852b1, 1px 1px 1px 3px #203891, 1px 1px 15px 3px #3852b1, 1px 1px 1px 3px #203891, 1px 1px 1px 4px #3852b1, 1px 1px 1px 3px #203891;
+  color: #00717D;
+  font-size: 20px;
+  white-space: nowrap;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding: 9px 16px;
+  line-height: 1.2;
+  position: relative;
+  top: -5px;
+}
+.button2 {
+  display: inline-block;
+  border: 34px;
+  border-radius: 7px;
+  outline: 0;
+  width: auto;
+  height: auto;
+  background: #F2D8A7;
+  /*background: #CA00FF;*/
+  box-shadow: 1px 0px 1px #ff6a00, 0px 1px 1px #ff6a00, 2px 1px 1px #ff6a00, 1px 2px 1px #ff6a00, 3px 2px 1px #ff6a00, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 1px #3852b1, 6px 5px 1px #203891;
+  color: #00717D;
+  font-size: 20px;
+  white-space: nowrap;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding: 9px 16px;
+  line-height: 1.2;
+  position: relative;
+  top: -5px;
+}
+a .button {
+  background-color: #AEF1FF;
+}
+.stLine {
+  display: inline;
+}
+.button2:hover, .button:focus {
+  box-shadow: 1px 0px 1px #b6ff00, 0px 1px 1px #b6ff00, 2px 1px 1px #b6ff00, 1px 2px 1px #b6ff00, 3px 2px 1px #b6ff00, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 1px #3852b1, 6px 5px 1px #203891;
+}
+.button2:active {
+  box-shadow: 1px 0px 1px #b6ff00, 0px 1px 1px #b6ff00, 2px 1px 1px #b6ff00, 1px 2px 1px #b6ff00, 3px 2px 1px #b6ff00, 2px 3px 1px #3852b1, 4px 3px 1px #203891, 3px 4px 1px #3852b1, 5px 4px 1px #203891, 4px 5px 1px #3852b1, 6px 5px 1px #203891;
+  -webkit-transform: translate(3px, 3px);
+  -moz-transform: translate(3px, 3px);
+  -ms-transform: translate(3px, 3px);
+  -o-transform: translate(3px, 3px);
+  transform: translate(3px, 3px);
+  -moz-transition-duration: 5s;
+  -webkit-transition-duration: 5s;
+  -o-transition-duration: 5s;
+}
+.thought-block {
+  display: block;
+  padding: 30px;
+  margin-bottom: -20px;
+}
+@media (min-height:735px) {
+  .button {
+    border-radius: 60px;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+  }
+  .area {
+    margin-bottom: 15px;
+  }
+  .thought-block {
+    display: block;
+    padding: 30px;
+    margin-bottom: -20px;
+  }
+}
+@media (max-height:530px) {
+  .not-compatible {
+    display: none;
+  }
+}
+@media (max-height:569px) {
+  .thought-block {
+    display: none;
+  }
+  .area {
+    margin-bottom: 10px;
+  }
 }
